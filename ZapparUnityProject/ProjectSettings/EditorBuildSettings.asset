@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Ron/Scenes/RonFaceTest.unity
     guid: 6f9d0e97112d37c4c8a253c6f8a91417
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Ron/Scenes/Mini City.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Samples/WebGL Video Recorder/1.0.0/Examples/VideoRecorderSample.unity
     guid: e0407ae97f52e4415bedf55143460cb6
+  - enabled: 1
+    path: Assets/_Ron/Scenes/RonPlay.unity
+    guid: 39e140d92937b6a44a82f2011b22c9fb
   m_configObjects: {}
