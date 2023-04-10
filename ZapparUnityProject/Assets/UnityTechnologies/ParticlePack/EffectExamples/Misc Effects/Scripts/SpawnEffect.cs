@@ -43,4 +43,17 @@ public class SpawnEffect : MonoBehaviour {
         _renderer.material.SetFloat(shaderProperty, fadeIn.Evaluate( Mathf.InverseLerp(0, spawnEffectTime, timer)));
         
     }
+
+    public void RedBall ()
+    {
+        pause = 3;
+        _renderer.material.SetFloat(shaderProperty, fadeIn.Evaluate(Mathf.InverseLerp(0, spawnEffectTime, timer)));
+        Invoke("SetPause", 2.0f);
+    }
+
+    public void SetPause()
+    {
+        pause = 10000;
+       
+    }
 }
