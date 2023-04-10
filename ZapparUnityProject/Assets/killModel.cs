@@ -4,14 +4,32 @@ using UnityEngine;
 
 public class killModel : MonoBehaviour
 {
+    public GameObject explosionPrefab;
+    public float modelTimer;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("KillModel", 6.8f);
+        Invoke("KillModell", modelTimer);
     }
 
-    public void KillModel()
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Destroy this object
+            Destroy(gameObject);
+            // Instantiate explosion effect at this object's position
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            //Invoke("KillParticle", 1.0f);
+
+            // Play explosion sound effect
+
+        }
+    }
+
+    public void KillModell()
+    {
+
         Destroy(gameObject);
     }
 }
