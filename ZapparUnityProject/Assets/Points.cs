@@ -39,6 +39,9 @@ public class Points : MonoBehaviour
         }
     }
 
-
+    private void Update()
+    {
+        score.text = "" + scoreValue;
+    }
 
 }

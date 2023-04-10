@@ -60,12 +60,12 @@ public class MovePlayer : MonoBehaviour
         if (isMovingLeft)
         {
             transform.Translate(-speed * Time.deltaTime, 0, 0);
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -0.675f, -0.4f), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.localPosition.x, -0.675f, -0.4f), transform.position.y, transform.position.z);
         }
         else if (isMovingRight)
         {
             transform.Translate(speed * Time.deltaTime, 0, 0);
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -0.675f, -0.4f), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.localPosition.x, -0.675f, -0.4f), transform.position.y, transform.position.z);
         }
 
         // Jump the player
