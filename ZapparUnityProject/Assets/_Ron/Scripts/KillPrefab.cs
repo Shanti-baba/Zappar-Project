@@ -16,9 +16,9 @@ public class KillPrefab : MonoBehaviour
             Destroy(gameObject);
             // Instantiate explosion effect at this object's position
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            Invoke("KillParticle", 1.0f);
+           // Invoke("KillParticle", 1.0f);
 
-            // Play explosion sound effect
+            
             
         }
     }

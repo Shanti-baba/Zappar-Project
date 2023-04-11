@@ -9,7 +9,9 @@ public class Points : MonoBehaviour
     public TMP_Text score;
     public int scoreValue = 0;
     public int lives = 3;
+    public float gameOverTimer;
     public Image [] livesImages;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Collect"))
@@ -34,7 +36,7 @@ public class Points : MonoBehaviour
             if (lives == 0)
             {
                 livesImages[0].GetComponent<Image>().enabled = false;
-                Time.timeScale = 0;
+                Invoke("GameOver", gameOverTimer);
             }
         }
     }
@@ -42,6 +44,11 @@ public class Points : MonoBehaviour
     private void Update()
     {
         score.text = "" + scoreValue;
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
     }
 
 }

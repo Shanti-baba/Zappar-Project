@@ -21,7 +21,7 @@ public class killModel : MonoBehaviour
             // Instantiate explosion effect at this object's position
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             //Invoke("KillParticle", 1.0f);
-
+            Debug.Log("EXPLOSION!!!");
             // Play explosion sound effect
 
         }
