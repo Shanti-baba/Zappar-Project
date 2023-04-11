@@ -25,7 +25,7 @@ public class MovePlayer : MonoBehaviour
         // Get the UI button triggers
         leftButtonTrigger = GameObject.Find("LeftButton").GetComponent<EventTrigger>();
         rightButtonTrigger = GameObject.Find("RightButton").GetComponent<EventTrigger>();
-        jumpButtonTrigger = GameObject.Find("JumpButton").GetComponent<EventTrigger>();
+      //  jumpButtonTrigger = GameObject.Find("JumpButton").GetComponent<EventTrigger>();
 
         // Set up the pointer down/up events for the left button
         var pointerDownLeft = new EventTrigger.Entry { eventID = EventTriggerType.PointerDown };
@@ -51,7 +51,7 @@ public class MovePlayer : MonoBehaviour
         var pointerDownJump = new EventTrigger.Entry { eventID = EventTriggerType.PointerDown };
         pointerDownJump.callback.AddListener((eventData) => Jump());
 
-        jumpButtonTrigger.triggers.Add(pointerDownJump);
+       // jumpButtonTrigger.triggers.Add(pointerDownJump);
     }
 
     private void FixedUpdate()
@@ -68,7 +68,7 @@ public class MovePlayer : MonoBehaviour
             transform.position = new Vector3(Mathf.Clamp(transform.localPosition.x, -0.38f, 0.38f), transform.position.y, transform.position.z);
         }
 
-        // Jump the player
+     /*   // Jump the player
         if (isJumping)
         {
             transform.Translate(0, jumpHeight * Time.deltaTime, 0);
@@ -79,7 +79,7 @@ public class MovePlayer : MonoBehaviour
             Invoke("EnableJumpButton", invokeJumpTime);
             Invoke("EnableLeftButton", invokeJumpTime);
             Invoke("EnableRightButton", invokeJumpTime);
-        }
+        }*/
     }
 
     public void StartMovingLeft()

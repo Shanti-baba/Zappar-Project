@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2262563487345278055}
   - component: {fileID: 2262563487345278051}
   - component: {fileID: 2262563487345278050}
-  - component: {fileID: 2262563487345278077}
   - component: {fileID: 2262563487345278076}
-  - component: {fileID: 3140069622490939446}
+  - component: {fileID: 2718220734097124548}
   m_Layer: 0
   m_Name: Vespa
   m_TagString: Player
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2262563487345278052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 0.69, z: -12}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -65,23 +64,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5414734, y: 1, z: 0.23990405}
   m_Center: {x: 0.002360344, y: 0.54999995, z: 0.605048}
---- !u!114 &2262563487345278077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2262563487345278052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92a964764987e244da5aa1454eef8fd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: -9.865
-  groundDistance: 0.08
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!82 &2262563487345278076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -102,10 +84,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.1
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -178,7 +160,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3140069622490939446
+--- !u!114 &2718220734097124548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,9 +169,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2262563487345278052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2f1f6aaa4d6d34c8d1e0e298f5458e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a8d45341565e084f90c00eb401fbb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  scoreValue: 0
+  lives: 3
+  gameOverTimer: 0.7
+  livesImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &2262563487202978322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,6 +277,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3813a5491d62c9048b4c5466b00ed841, type: 3}
+--- !u!1 &2262563487203093740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 182014, guid: 3813a5491d62c9048b4c5466b00ed841, type: 3}
+  m_PrefabInstance: {fileID: 2262563487202978322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2634293523515938644
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262563487203093740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 397656f98cc4b2d4880beec2f3ea668e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2262563487203440846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 463580, guid: 3813a5491d62c9048b4c5466b00ed841, type: 3}
