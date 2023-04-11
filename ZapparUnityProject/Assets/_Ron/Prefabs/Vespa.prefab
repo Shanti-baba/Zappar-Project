@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2262563487345278055}
   - component: {fileID: 2262563487345278051}
+  - component: {fileID: 2718220734097124548}
   - component: {fileID: 2262563487345278050}
   - component: {fileID: 2262563487345278076}
-  - component: {fileID: 2718220734097124548}
   m_Layer: 0
   m_Name: Vespa
   m_TagString: Player
@@ -51,6 +51,26 @@ MonoBehaviour:
   speed: 7
   jumpHeight: 80
   invokeJumpTime: 0.6
+--- !u!114 &2718220734097124548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262563487345278052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8d45341565e084f90c00eb401fbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  scoreValue: 0
+  lives: 3
+  gameOverTimer: 0.7
+  livesImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!65 &2262563487345278050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -160,26 +180,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2718220734097124548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2262563487345278052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a8d45341565e084f90c00eb401fbb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
-  scoreValue: 0
-  lives: 3
-  gameOverTimer: 0.7
-  livesImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &2262563487202978322
 PrefabInstance:
   m_ObjectHideFlags: 0
