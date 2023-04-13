@@ -41,7 +41,7 @@ public class SpawnObjects : MonoBehaviour
             StartCoroutine(SpawnPrefab());
             Debug.Log("START IS TRUE NOW");
             start = true;
-            return;
+            //return;
 
         }
      
