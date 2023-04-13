@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4188861847212181448}
   - component: {fileID: 7930351494438130913}
   - component: {fileID: 6182903966186063159}
-  - component: {fileID: 4056078176991051952}
+  - component: {fileID: 3947573982486876930}
   m_Layer: 0
   m_Name: BarrierContainer
   m_TagString: Barrier
@@ -64,7 +64,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3400002, y: 1.1915433, z: 0.48000002}
   m_Center: {x: 0, y: 0.3342285, z: 0}
---- !u!114 &4056078176991051952
+--- !u!114 &3947573982486876930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,11 +73,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4188861847212181455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2f1f6aaa4d6d34c8d1e0e298f5458e, type: 3}
+  m_Script: {fileID: 11500000, guid: 11914d986f7348949b5bc605d794d5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 4763317027656444245, guid: edfa012ce8ee19b418df44a6faa8855a, type: 3}
-  modelTimer: 1.85
+  particalPrefab:
+  - {fileID: 4763317027656444245, guid: edfa012ce8ee19b418df44a6faa8855a, type: 3}
+  modelTimer: 1.8
+  isInteractable: 1
 --- !u!1 &4341342629962662376
 GameObject:
   m_ObjectHideFlags: 0

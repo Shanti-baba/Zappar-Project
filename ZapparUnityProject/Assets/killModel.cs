@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class killModel : MonoBehaviour
 {
-    public GameObject explosionPrefab;
+    public GameObject particalPrefab;
     public float modelTimer;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class killModel : MonoBehaviour
             // Destroy this object
             Destroy(gameObject);
             // Instantiate explosion effect at this object's position
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Instantiate(particalPrefab, transform.position, Quaternion.identity);
             //Invoke("KillParticle", 1.0f);
             Debug.Log("EXPLOSION!!!");
             // Play explosion sound effect

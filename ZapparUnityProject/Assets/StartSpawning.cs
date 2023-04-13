@@ -19,6 +19,11 @@ public class StartSpawning : MonoBehaviour
         {
             spawnerScript[0].start = false;
             spawnerScript[1].start = false;
+            spawnerScript[2].start = false;
+            spawnerScript[3].start = false;
+            spawnerScript[4].start = false;
+            spawnerScript[5].start = false;
+
         }
     }
 }
