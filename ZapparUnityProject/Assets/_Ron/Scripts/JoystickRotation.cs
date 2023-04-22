@@ -14,4 +14,6 @@ public class JoystickRotation : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, rotateHorizontal * rotationSpeed, 0);
         transform.localRotation *= rotation;
     }
+
+   
 }
